@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageMap</title>
+    <style>
+        body{
+            background: radial-gradient(#202020,#282828,#303030,#383838,#404040);
+        }
+        h1{
+            color: white;
+        }
+        h3{
+            color: white;
+        }
+        img{
+            border-radius: 8%;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>VELACHERY</h1>
+        <h3>V. HARINI - (25016357)</h3>
+        {% load static %}
+        <img src="{% static 'image.png' %}" usemap="#map" width="600" height="400">
+        <map name="map">
+        <area shape="rect" coords="100,6,400,40" href="{% url 'mall' %}" title="Phoenix Mall" alt="Phoenix Mall">
+        <area shape="rect" coords="160,60,350,100" href="{% url 'veg' %}" title="Geetham Veg Restaurant" alt="Geetham Veg Restaurant">
+        <area shape="rect" coords="160,100,450,150" href="{% url 'grt' %}" title="GRT Jewellery" alt="GRT Jewellery">
+        <area shape="rect" coords="120,6,520,40" href="{% url 'college' %}" title="Guru Nanak College" alt="Guru Nanak College">
+        <area shape="rect" coords="120,15,520,60" href="{% url 'westin' %}" title="Westin" alt="Westin">
+        </map>
+    </center>
+</body>
+</html>
